@@ -1,0 +1,7 @@
+
+uniform sampler2DRect srcImage;
+uniform float exposure;
+
+void main(void){
+	gl_FragColor = texture2DRect(srcImage, gl_TexCoord[0].xy)*exposure;
+}

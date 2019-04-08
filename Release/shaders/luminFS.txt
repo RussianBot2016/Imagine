@@ -1,0 +1,7 @@
+uniform sampler2DRect srcImage;
+
+void main(void){
+	vec4 image = texture2DRect(srcImage, gl_TexCoord[0].xy);
+	float lum = (image.r + image.g + image.b)/3.0;
+	gl_FragColor = vec4(lum,lum,lum,1.0);
+}
