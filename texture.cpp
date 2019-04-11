@@ -355,11 +355,13 @@ bool CTexture::SaveTGA(const char *filename){
 	glReadPixels(0,0,width,height,format,type,data);
 
 	//switch image from RGB to BGR
+	/*
 	for(i=0; i < size; i+=channels){
 		temp = data[i];
 		data[i]=data[i+2];
 		data[i+2]=temp;
 	}
+	*/
 
 	fwrite(data,size,1,pFile);
 	fclose(pFile);
